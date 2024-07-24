@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> -->
+    <script src="jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="grammar.js"></script>
+    <script src="database.js"></script>
+    <script src="poppup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        button {
+            height: 24px;
+            width: 90px;
+            outline: none;
+        }
+        
+        .buttonss {
+            display: inline;
+        }
+        
+        #Feedback {
+            vertical-align: super;
+        }
+        #category{
+            color: black;
+            font-size: 20px;
+            margin-left: 110px;
+        }
+        #Bias{
+            color: black;
+            font-size: 20px;
+            margin-left: 100px;
+        }
+        #claim {
+            width: 50%;
+        }
+        
+        #sentence {
+            width: 50%;
+        }
+        
+        #content {
+            width: 450px;
+            word-wrap: break-word;
+            text-align: center;
+            font-family: 'Poppins', serif;
+        }
+        
+        .fancybutton {
+            border-radius: 10px;
+            color: white;
+            background-color: #044B7F;
+            border-color: #044B7F;
+            border-width: 2px;
+            padding: 3px;
+            box-shadow: none;
+            border-style: solid;
+        }
+        
+        .names {
+            border-radius: 15px;
+            border-color: #044B7F;
+            border-width: thin;
+            border-style: solid;
+            width: 100px;
+            height: 20px;
+            margin-bottom: 6px;
+            margin-left: 10%;
+            /*display: inline;*/
+            /*float: left;*/
+            /*white-space: pre-line;*/
+        }
+        .gradientbar{
+            /*display: inline;*/
+            width: 200px;
+            height: 10px;
+            background: rgb(15,255,0);
+            background-image: linear-gradient(90deg, rgba(15,255,0,1) 0%, rgba(255,240,0,1) 50%, rgba(255,0,0,1) 100%);
+            margin-left: 10px;  
+            border-radius: 20px;
+            /*float: right;*/
+        }
+        
+        .names span {
+            color: #044B7F;
+            font-size: 10px;
+            top: 2px;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+        }
+        
+        input[type=text] {
+            border-radius: 10px;
+            padding: 5px;
+            border-color: #aaaaaa;
+            border-style: solid;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        
+        .howcontentlooks {
+            border-color: blue;
+            border-radius: 15px;
+            border-style: solid;
+            width: 300px;
+            height: 30px;
+            margin-left: 15%;
+            margin-bottom: 10px;
+        }
+        #thewhereithappens{
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .info-row {
+            /*display: inline;*/
+            display: flex;
+            align-items: center;
+        }
+        .title{
+            display: inline;
+
+        }
+      
+    </style>
+</head>
+
+<body>
+    
+        <input type="image" src="logo.png" name="image" width="150" height="95">
+<div id="content">
+        <div class="howcontentlooks">
+            <span id="thewhereithappens">Content looks reliable</span>
+        </div>
+        <h2 class="title">We checked</h2>
+        <h2 id="website" class="title"></h2>
+        <h2 class="title"> and found: </h2>
+        <div class="info-row">
+        <div class="names">
+            <span>Political Affiliation</span>
+        </div>
+        <span id="category" ></span>
+    </div>
+        <div class="info-row">
+            <div class="names">
+                <span>Degree of Bias</span>
+            </div>
+            <!-- <div class="gradientbar"></div> -->
+            <span id="Bias"></span>
+        </div>
+        <div class="info-row">
+            <div class="names">
+                <span>Click-Bait</span>
+            </div>
+            <div class="gradientbar" id="clickbait"></div>
+        </div>
+        <h4 id="date"></h4>
+
+        <input type="text" placeholder="Paste your claim here" id="claim">
+        <button type="button" class="fancybutton">Fact Check</button>
+        <div class="hi">
+            <!-- inner html -->
+            <br>
+        </div>
+        <div id="demo">
+            <form action="/action_page.php">
+                <input type="text" id="sentence" placeholder="Paste the text here">
+
+                <button type="button" id="Grammar_Button" class="fancybutton">Grammar</button>
+            </form>
+        </div>
+        <div class="hi"> </div>
+        <div class="hi"> </div>
+        <br>
+        <script src="poppup.js">
+        </script>
+
+        <div class="buttonss">
+            <h3 id="Feedback">Feedback on Final Result: </h3>
+        </div>
+        <div class="buttonss">
+            <input type="image" src="like.png" name="submitresult" height="30" width="30">
+        </div>
+        <div class="buttonss">
+            <input type="image" src="dislike.png" name="submitresult" height="30" width="30">
+        </div>
+
+    </div>
+    <br>
+</body>
+
+</html>
